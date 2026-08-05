@@ -1,0 +1,186 @@
+{
+    "app_id": "1245802015594909748",
+    "fire_level": 0,
+    "rules": {
+        "cat": {
+            "keywords": [
+                "uwu", "ny+a", "meow", "mewo", "mrr",
+                "purr", "mraow", "owo", ":3", ">w<",
+                "-w-", "—w—", "–w–", "owu", "uwo", "colonthree",
+                "colon three", "maul", ":#", "ω",
+                "^w^", "silly", "cat", "cta", "feline", "marchi", "gato", "gatto"
+            ],
+            "reactions": ["🐱","😺","😸","😻","😼","😽","🙀","😿","😾","😹","🐈‍⬛","🐈"]
+        },
+        "dog": {
+            "keywords": ["dog", "perro"],
+            "reactions": ["🐶","🦮","🐕‍🦺","🐕"]
+        },
+        "british": {
+            "keywords": ["tea","mate","colour","bruv","innit","favourite","twat","rubbish","mum"],
+            "reactions": ["🇬🇧"]
+        },
+        "niko": {
+            "keywords": ["oneshot","one shot","niko","niok","sun","solstice","83c","light",":<"],
+            "reactions": ["<:goober:1234979587629252619>","<:niok:1239933201078816799>","<:83c:1236763657497743470>"]
+        },
+        "nikoseal": {
+            "keywords": ["niko","niok"],
+            "reactions": ["🦭"]
+        },
+        "kirimi": {
+            "keywords": ["kihaha", "kihihaha", "kihihihaha", "dwy", "kirimi", "dream world yellow"],
+            "reactions": ["🐟","🎣","🐠","🐡"]
+        },
+        "taiyo": {
+            "keywords": [
+                "sun","car insurance","tiny","carinsurance","wwww",
+                "nipples on your face and tits","sorry lol",
+                "you man with the manly chest","shoo shoo","taiyo", "ha\\?\\?"
+            ],
+            "reactions": ["<:tinyo:1246505726654808164>","<:taiyoknife:1247965401221173349>"]
+        },
+        "america": {
+            "keywords": ["what the fuck is a kilometer","freedom","america","murica","burger"],
+            "reactions": ["🇺🇸","🦅","🍔","<:eagle:1255983692891820093>","🫃"]
+        },
+        "weegee": {
+            "keywords": ["weegee","sex offender"],
+            "reactions": ["<:deviousaxez:1248001780965441702>"]
+        },
+        "ejaculation": {
+            "keywords": ["hear me out","simp","^[^a-zA-Z0-9:]*would[^a-zA-Z0-9:]*$","would smash","^[^a-zA-Z0-9:]*smash[^a-zA-Z0-9:]*$"],
+            "reactions": ["<:simp:1247961917490729010>"]
+        },
+        "miiverse": {
+            "keywords": ["miiverse","y+((e+a*|(u+(h|p)+|a+h*))|h+)","yse"],
+            "reactions": ["<:yellowyeah:1251298655751639092>","<:sm64yeah:1251514167664574525>","<:bupyeah:1251537611974250496>","<:eclipseyeah:1254494364827254808>"]
+        },
+        "aeth": {
+            "keywords": ["kill(ing|) (my|your)self","k(y|m)s"],
+            "reactions": ["<:r_:1240424489905553439>"]
+        },
+        "linux": {
+            "keywords": ["linux"],
+            "reactions": ["🐧","<:hellopenguin:1256286995890700369>"]
+        },
+        "hellopenguin": {
+            "keywords": ["h *e *l *l *o"],
+            "reactions": ["<:hellopenguin:1256286995890700369>"]
+        },
+        "arch": {
+            "keywords": ["arch"],
+            "reactions": ["🏳️‍⚧️","🏳️‍🌈","🦊"]
+        },
+        "syumitaro": {
+            "keywords": ["syu"],
+            "reactions": ["<:syumitaro:1238158209106051072>"]
+        },
+        "mpreg": {
+            "keywords": ["🫃",":man_pregnant:","preg","mpeg"],
+            "reactions": ["🫃"]
+        },
+        "pi": {
+            "keywords": ["π","(?<![a-zA-Z])pi(?![a-zA-Z])","3\\.14"],
+            "reactions": ["<:pi:1239557003316170843>"]
+        },
+        "gyro": {
+            "keywords": ["gyro"],
+            "reactions": ["💶"]
+        },
+        "bleugh": {
+            "keywords": ["microsoft","apple","macos","ios","iphone","ipad","ipod","airpod","adobe","premiere","after effects","photoshop","illustrator","win8","win8.1","win10","win11","windows 8", "windows 8.1", "windows 10", "windows 11","twitter","twt"],
+            "reactions": ["🤮"]
+        },
+        "freakether": {
+            "keywords": ["aigis","clank","robot"],
+            "reactions": ["<:freakether:1291125866977558598>"]
+        },
+        "wario": {
+            "keywords": ["couch","hump"],
+            "reactions": ["<:imhumpingmycouch:1248351112386580630>"]
+        },
+        "cornbread": {
+            "keywords": ["corn"],
+            "reactions": ["<:cornbread:1291882981811683433>"]
+        },
+        "sandals": {
+            "keywords": ["sandal","fox"],
+            "reactions": ["<:sandals:1291882559315378176>"]
+        },
+        "nahobino": {
+            "keywords": ["bino"],
+            "reactions": ["🏳️‍⚧️"]
+        },
+        "jackfrost": {
+            "keywords": ["jack frost","heeho","hee ho","hee-ho"],
+            "reactions": ["🔥"]
+        },
+        "iron": {
+            "keywords": ["iron"],
+            "reactions": ["<:the_fucking_iron:1364676750856159415>"]
+        },
+        "aogami": {
+            "keywords": ["aogami","young man"],
+            "reactions": ["<:grandpa:1300744282432475229>"]
+        },
+        "freebsd": {
+            "keywords": ["freebsd"],
+            "reactions": ["😈"]
+        },
+        "ghost": {
+            "keywords": ["ghost"],
+            "reactions": ["<:plushia:1331672002855047168>"]
+        },
+        "mint": {
+            "keywords": ["mint"],
+            "reactions": ["🍬"]
+        },
+        "dih": {
+             "keywords": ["[a-z0-9]i+h", "38"],
+             "reactions": ["<:dih:1427640284493119539>"]
+        },
+        "calling": {
+             "keywords": ["26","hiohio                  hiohio\n            hio      hio\n       hio         hiohiohio\n   hio             hio          hio\nhio                 hio        hio\nhiohiohio         hiohio"],
+             "reactions": ["📲", "🤙"]
+        },
+        "yip": {
+             "keywords": ["yip"],
+             "reactions": ["🦊"]
+        }
+    },
+    "channel_blacklist": [
+        "1233157552443883540",
+        "1359421931673092157",
+        "1237047273129640128",
+        "1251429499468517451",
+        "1330193662084120650",
+        "1457834605834145997"
+    ],
+    "funnies": {
+        "aether you fucking catboy": "^",
+        "the fucking iron": "<:the_fucking_iron:1479160085711421677>",
+        "g": { "content": "g...", "files": [ "g.png" ] },
+        "bell": { "content": "ultrakill reference?", "files": [ "bell.mp4" ] }
+    },
+    "horny": {
+        "1279586225149181952": [ "1236398659135082538", "1391419140413063331" ],
+        "1356248345508843692": [ "1356247403212050432" ],
+        "718393605068292176": [ "742123470145585253" ],
+        "1391419319652712498": [ "1391419140413063331" ],
+        "1457838622425485343": [ "1457836615933231238" ]
+    },
+    "geolayout": {
+        "": "fuck you",
+        "fuck you": "FUCK **YOU**",
+        "(kill (your|ur)self|kys)(| (nuke|v2|toaster))": "no u 🫶",
+        "sh(u|i)t (the fuck|)u(p|o)": "kill yourself",
+        "stfu": "kill yourself",
+        "sybau": "kill yourself",
+        "dih": "how about i cut that thing of yours",
+        "dihh": "how about i cut that thing of yours"
+    },
+    "cogs": [
+        "randomcat", "randomfox", "reloadcfg", "reactor"
+    ]
+}
