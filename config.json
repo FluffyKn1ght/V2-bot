@@ -192,7 +192,11 @@
         "opensource", 
         "neofetch",
         "bully",
-        "funnies"
+        "funnies",
+        "talk",
+        "misc_msgs",
+        "dictionary",
+        "getou"
     ],
     "bully": [
         {
