@@ -3,10 +3,12 @@ import traceback
 from typing import Any
 
 from disnake import Intents
+from disnake.ext import commands
 from disnake.ext.commands import InteractionBot
 import json
 
 from disnake.interactions.application_command import ApplicationCommandInteraction
+from disnake.message import Message
 
 
 class V2Bot(InteractionBot):
@@ -22,6 +24,8 @@ class V2Bot(InteractionBot):
             print(f"Loading cog {cog}")
             self.load_extension(f"cogs.{cog}")
 
+        self.selected_messages: dict[int, int] = {}
+
         @self.event
         async def on_ready():
             print(f"Logged in as {self.user.display_name} ({self.user.id})")
@@ -33,6 +37,14 @@ class V2Bot(InteractionBot):
             print(
                 f"SLASH COMMAND ERROR in {inter.application_command.name}! {e.__class__.__name__}: {e}"
             )
+
+        @self.message_command(name="select meassg")
+        async def select_message_message_command(
+            inter: ApplicationCommandInteraction, message: Message
+        ):
+            self.selected_messages[inter.user.id] = message.id
+
+            await inter.response.send_message(":+1:", ephemeral=True)
 
     def run_bot(self):
         self.run(self.secrets["token"])

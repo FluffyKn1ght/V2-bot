@@ -17,7 +17,7 @@ int main() {
     memset(term, ' ', sizeof(term));
     int x = 0, y = 0;
     char c;
-    while ((c = getchar()) != 255) {
+    while ((c = getchar()) != -1) {
         if (c == '\e') {
             getchar(); // [
             char number[128];

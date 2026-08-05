@@ -9,19 +9,6 @@ from main import V2Bot
 
 
 class Reactor(V2BotCog):
-    def __init__(self, bot: V2Bot) -> None:
-        super().__init__(bot)
-
-        self.selected_messages: dict[int, int] = {}
-
-    @commands.message_command(name="select meassg")
-    async def select_message_message_command(
-        self, inter: ApplicationCommandInteraction, message: Message
-    ):
-        self.selected_messages[inter.user.id] = message.id
-
-        await inter.response.send_message(":+1:", ephemeral=True)
-
     @commands.slash_command(
         name="react_to_msg", description="makes the bot react to a selected message"
     )
@@ -30,7 +17,7 @@ class Reactor(V2BotCog):
         inter: ApplicationCommandInteraction,
         emojis: str = Param(desc='emojis (one or multiple split by ","s)'),
     ):
-        if not inter.user.id in self.selected_messages.keys():
+        if not inter.user.id in self.bot.selected_messages.keys():
             await inter.response.send_message(
                 "you havent selected a message vro :wilted_rose:", ephemeral=True
             )
@@ -40,7 +27,7 @@ class Reactor(V2BotCog):
 
         try:
             msg = await inter.channel.fetch_message(
-                self.selected_messages[inter.user.id]
+                self.bot.selected_messages[inter.user.id]
             )
         except Exception:
             await inter.response.send_message(

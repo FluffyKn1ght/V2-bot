@@ -181,6 +181,11 @@
         "dihh": "how about i cut that thing of yours"
     },
     "cogs": [
-        "randomcat", "randomfox", "reloadcfg", "reactor"
+        "randomcat", 
+        "randomfox", 
+        "reloadcfg", 
+        "reactor", 
+        "opensource", 
+        "neofetch"
     ]
 }

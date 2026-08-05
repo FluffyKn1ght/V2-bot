@@ -5,7 +5,7 @@ from cogs.v2cog import V2BotCog
 from main import V2Bot
 
 
-class ReloadConfigCommand(V2BotCog):
+class ReloadConfigSlashCommand(V2BotCog):
     @commands.slash_command(name="reloadcfg", description="reloads the config")
     async def reloadcfg_command(self, inter: ApplicationCommandInteraction):
         await inter.response.defer(ephemeral=True)
@@ -18,4 +18,4 @@ class ReloadConfigCommand(V2BotCog):
 
 
 def setup(bot: V2Bot):
-    bot.add_cog(ReloadConfigCommand(bot))
+    bot.add_cog(ReloadConfigSlashCommand(bot))
