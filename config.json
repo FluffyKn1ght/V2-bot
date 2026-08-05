@@ -164,7 +164,7 @@
     "funnies": {
         "aether you fucking catboy": "^",
         "the fucking iron": "<:the_fucking_iron:1479160085711421677>",
-        "g": { "content": "g...", "files": [ "g.png" ] },
+        "g": { "content": "g...", "files": [ "g.png", "g.mp3" ] },
         "bell": { "content": "ultrakill reference?", "files": [ "bell.mp4" ] }
     },
     "horny": {
@@ -191,16 +191,12 @@
         "reactor", 
         "opensource", 
         "neofetch",
-        "bully"
+        "bully",
+        "funnies"
     ],
     "bully": [
         {
             "uid": 1507671898740494336,
-            "rule": "cat",
-            "dirname": "aeth-catboys"
-        },
-        {
-            "uid": 639402866657984522,
             "rule": "cat",
             "dirname": "aeth-catboys"
         }

@@ -1,7 +1,6 @@
 import random
 import re
 
-from disnake.components import C
 from disnake.ext import commands
 from disnake.ext.commands.cog import Cog
 from disnake.ext.commands.params import Param
@@ -63,6 +62,9 @@ class Reactor(V2BotCog):
 
     @Cog.listener("on_message")
     async def run_message_react_rules(self, msg: Message):
+        if msg.channel.id in self.bot.config["channel_blacklist"]:
+            return
+
         for rule_name in self.bot.config["rules"]:
             rule = self.bot.config["rules"][rule_name]
 
