@@ -52,6 +52,9 @@ class V2Bot(InteractionBot):
     def reload_config(self):
         self.config = json.loads(self.read_file(self.config_file))
 
+        if self.is_ready():
+            self.get_cog("StatusManager").reload_status_config()  # type: ignore
+
     @staticmethod
     def read_file(fname: str) -> str:
         with open(fname, "r") as fp:
