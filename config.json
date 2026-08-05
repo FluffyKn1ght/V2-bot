@@ -72,6 +72,10 @@
             "keywords": ["arch"],
             "reactions": ["🏳️‍⚧️","🏳️‍🌈","🦊"]
         },
+        "rust": {
+            "keywords": ["rust"],
+            "reactions": ["🏳️‍⚧️", "🦀"]
+        },
         "syumitaro": {
             "keywords": ["syu"],
             "reactions": ["<:syumitaro:1238158209106051072>"]
@@ -186,6 +190,19 @@
         "reloadcfg", 
         "reactor", 
         "opensource", 
-        "neofetch"
+        "neofetch",
+        "bully"
+    ],
+    "bully": [
+        {
+            "uid": 1507671898740494336,
+            "rule": "cat",
+            "dirname": "aeth-catboys"
+        },
+        {
+            "uid": 639402866657984522,
+            "rule": "cat",
+            "dirname": "aeth-catboys"
+        }
     ]
 }
