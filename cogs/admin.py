@@ -24,7 +24,7 @@ class AdminSlashCommands(V2BotCog):
             "okay :+1: \\*kills himself\\*", ephemeral=True
         )
 
-        exit()
+        exit(1)
 
 
 def setup(bot: V2Bot):
