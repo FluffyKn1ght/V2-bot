@@ -15,14 +15,16 @@ class V2Bot(InteractionBot):
     def __init__(self, *args, config_file: str, secrets_file: str, **kwargs) -> None:
         super().__init__(*args, **kwargs)
 
-        self.secrets: dict[str, Any] = json.loads(self.read_file(secrets_file))
-
         self.config_file = config_file
-        self.reload_config()
+        self.config = json.loads(self.read_file(config_file))
 
         for cog in self.config["cogs"]:
             print(f"Loading cog {cog}")
             self.load_extension(f"cogs.{cog}")
+
+        self.secrets: dict[str, Any] = json.loads(self.read_file(secrets_file))
+
+        self.reload_config()
 
         self.selected_messages: dict[int, int] = {}
         self.srs_channels: set[int] = set()
@@ -53,9 +55,9 @@ class V2Bot(InteractionBot):
     def reload_config(self):
         self.config = json.loads(self.read_file(self.config_file))
 
-        if self.is_ready():
-            self.get_cog("StatusManager").reload_status_config()  # type: ignore
-            self.get_cog("Bully").reload_bully_types()  # type: ignore
+        self.get_cog("StatusManager").reload_status_config()  # type: ignore
+        self.get_cog("Bully").reload_bully_types()  # type: ignore
+        self.get_cog("KDEDragonSlashCommand").reload_catalogue()  # type: ignore
 
     def can_j_in_channel(self, channel_id: int) -> bool:
         return not (
