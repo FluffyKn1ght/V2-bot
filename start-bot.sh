@@ -1,6 +1,6 @@
 echo Checking for updates...
 git pull
-pip install -r requirements.txt
+.venv/bin/pip install -r requirements.txt
 echo Starting bot!
-python main.py
+.venv/bin/python main.py
 echo Bot stopped
