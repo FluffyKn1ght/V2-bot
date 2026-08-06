@@ -62,7 +62,7 @@ class Reactor(V2BotCog):
 
     @Cog.listener("on_message")
     async def run_message_react_rules(self, msg: Message):
-        if msg.channel.id in self.bot.config["channel_blacklist"]:
+        if not self.bot.can_j_in_channel(msg.channel.id):
             return
 
         for rule_name in self.bot.config["rules"]:
@@ -76,7 +76,8 @@ class Reactor(V2BotCog):
                     break
 
             if match_found:
-                for bully_rule in self.bot.config["bully"]:
+                for bully_type in self.bot.config["bully"]:
+                    bully_rule = self.bot.config["bully"][bully_type]
                     if (
                         bully_rule["uid"] == msg.author.id
                         and bully_rule["rule"] == rule_name

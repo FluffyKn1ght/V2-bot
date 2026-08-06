@@ -8,7 +8,8 @@
                 "purr", "mraow", "owo", ":3", ">w<",
                 "-w-", "—w—", "–w–", "owu", "uwo", "colonthree",
                 "colon three", "maul", ":#", "ω",
-                "^w^", "silly", "cat", "cta", "feline", "marchi", "gato", "gatto"
+                "^w^", "silly", "cat", "cta", "feline", "marchi", "gato", "gatto",
+                "deni"
             ],
             "reactions": ["🐱","😺","😸","😻","😼","😽","🙀","😿","😾","😹","🐈‍⬛","🐈"]
         },
@@ -176,15 +177,35 @@
         "1534673037083807814": [ 1534673147691794463 ]
     },
     "geolayout": {
-        "": "fuck you",
         "fuck you": "FUCK **YOU**",
         "(kill (your|ur)self|kys)(| (nuke|v2|toaster))": "no u 🫶",
         "sh(u|i)t (the fuck|)u(p|o)": "kill yourself",
         "stfu": "kill yourself",
         "sybau": "kill yourself",
         "dih": "how about i cut that thing of yours",
-        "dihh": "how about i cut that thing of yours"
+        "dihh": "how about i cut that thing of yours",
+        "fuck": "you :3"
     },
+    "bully": {
+        "aether": {
+            "uid": 1507671898740494336,
+            "rule": "cat",
+            "dirname": "aeth-catboys"
+        }
+    },
+    "status_change_interval": 14400,
+    "statuses": [
+        "aether stay away from me",
+        "uwu i like mah thigh highs sm :3",
+        "i come back in greed encore",
+        "RECONSTRUCT WHAT",
+        "meow meow meow",
+        "yip yip yip",
+        "bested by this, this machine?",
+        "i just ultrakilled v1 (no cap)",
+        "waiting for deni to come out...",
+        "deni is a cat furry femboy btw"
+    ],
     "cogs": [
         "randomcat", 
         "randomfox", 
@@ -199,24 +220,8 @@
         "getou",
         "fleshprison",
         "status",
-        "aetherify"
-    ],
-    "bully": [
-        {
-            "uid": 1507671898740494336,
-            "rule": "cat",
-            "dirname": "aeth-catboys"
-        }
-    ],
-    "status_change_interval": 14400,
-    "statuses": [
-        "aether stay away from me",
-        "uwu i like mah thigh highs sm :3",
-        "i come back in greed encore",
-        "RECONSTRUCT WHAT",
-        "meow meow meow",
-        "yip yip yip",
-        "bested by this, this machine?",
-        "i just ultrakilled v1 (no cap)"
+        "aetherify",
+        "geolayout",
+        "srschannels"
     ]
 }

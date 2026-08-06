@@ -1,3 +1,5 @@
+import random
+
 from disnake.activity import Activity
 from disnake.ext import tasks
 from disnake.types.activity import ActivityType
@@ -11,7 +13,7 @@ class StatusManager(V2BotCog):
         super().__init__(bot)
 
         self.statuses = self.bot.config["statuses"]
-        self.current_status = -1
+        self.current_status = ""
         self.change_interval = self.bot.config["status_change_interval"]
 
         self.status_change_task.change_interval(seconds=self.change_interval)
@@ -20,14 +22,15 @@ class StatusManager(V2BotCog):
 
     @tasks.loop(seconds=14400.0)
     async def status_change_task(self):
-        self.current_status += 1
+        while True:
+            new_status = random.choice(self.statuses)
+            if new_status == self.current_status:
+                continue
+            break
 
-        if self.current_status >= len(self.statuses):
-            self.current_status = 0
+        self.current_status = new_status
 
-        await self.bot.change_presence(
-            activity=Activity(name=self.statuses[self.current_status])
-        )
+        await self.bot.change_presence(activity=Activity(name=self.current_status))
 
     @status_change_task.before_loop
     async def before_status_loop_task(self):
@@ -36,7 +39,8 @@ class StatusManager(V2BotCog):
 
     def reload_status_config(self):
         self.statuses = self.bot.config["statuses"]
-        self.current_status = 0
+        self.current_status = ""
+        self.last_status = ""
         self.change_interval = self.bot.config["status_change_interval"]
 
         self.status_change_task.change_interval(seconds=self.change_interval)

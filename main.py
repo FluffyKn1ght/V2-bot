@@ -25,6 +25,7 @@ class V2Bot(InteractionBot):
             self.load_extension(f"cogs.{cog}")
 
         self.selected_messages: dict[int, int] = {}
+        self.srs_channels: set[int] = set()
 
         @self.event
         async def on_ready():
@@ -54,6 +55,13 @@ class V2Bot(InteractionBot):
 
         if self.is_ready():
             self.get_cog("StatusManager").reload_status_config()  # type: ignore
+            self.get_cog("Bully").reload_bully_types()  # type: ignore
+
+    def can_j_in_channel(self, channel_id: int) -> bool:
+        return not (
+            channel_id in self.config["channel_blacklist"]
+            or channel_id in self.srs_channels
+        )
 
     @staticmethod
     def read_file(fname: str) -> str:
