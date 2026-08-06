@@ -1,6 +1,7 @@
 import random
 import re
 
+from disnake.errors import NotFound
 from disnake.ext import commands
 from disnake.ext.commands.cog import Cog
 from disnake.ext.commands.params import Param
@@ -87,8 +88,11 @@ class Reactor(V2BotCog):
                 reacts = rule["reactions"]
                 random.shuffle(reacts)
 
-                for react in reacts:
-                    await msg.add_reaction(react)
+                try:
+                    for react in reacts:
+                        await msg.add_reaction(react)
+                except NotFound:
+                    return
 
 
 def setup(bot: V2Bot):
