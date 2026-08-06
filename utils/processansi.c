@@ -16,7 +16,7 @@ int main() {
     char term[WIDTH * HEIGHT];
     memset(term, ' ', sizeof(term));
     int x = 0, y = 0;
-    char c;
+    signed char c;
     while ((c = getchar()) != -1) {
         if (c == '\e') {
             getchar(); // [
