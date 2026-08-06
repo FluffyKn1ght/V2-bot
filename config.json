@@ -149,8 +149,8 @@
              "reactions": ["📲", "🤙"]
         },
         "yip": {
-             "keywords": ["yip"],
-             "reactions": ["🦊"]
+             "keywords": ["yip", "fluffy"],
+             "reactions": ["🦊", "<:fluffymem:1535014474765828266>"]
         }
     },
     "channel_blacklist": [
