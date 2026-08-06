@@ -7,7 +7,12 @@
                 "purr", "mraow", "owo", ":3", ">w<",
                 "-w-", "—w—", "–w–", "owu", "uwo", "colonthree",
                 "colon three", "maul", ":#", "ω",
-                "^w^", "silly", "cat", "cta", "feline", "marchi", "gato", "gatto",
+                "^w^", "silly", "cat", "cta", "feline", "marchi", "gato", "gatto"
+            ],
+            "reactions": ["🐱","😺","😸","😻","😼","😽","🙀","😿","😾","😹","🐈‍⬛","🐈"]
+        },
+        "cat-deni": {
+            "keywords": [
                 "deni"
             ],
             "reactions": ["🐱","😺","😸","😻","😼","😽","🙀","😿","😾","😹","🐈‍⬛","🐈"]
@@ -219,10 +224,10 @@
         639402866657984522
     ],
     "cogs": [
-        "randomcat", 
-        "randomfox", 
-        "reloadcfg", 
-        "reactor", 
+        "randomcat",
+        "randomfox",
+        "reloadcfg",
+        "reactor",
         "neofetch",
         "bully",
         "funnies",
