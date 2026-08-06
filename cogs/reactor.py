@@ -71,7 +71,7 @@ class Reactor(V2BotCog):
 
             match_found = False
             for expr in rule["keywords"]:
-                result = re.search(expr, msg.content)
+                result = re.search(expr, msg.content.lower())
                 if result:
                     match_found = True
                     break
