@@ -246,6 +246,7 @@
         "geolayout",
         "srschannels",
         "kdedragon",
-        "admin"
+        "admin",
+        "furrify"
     ]
 }
