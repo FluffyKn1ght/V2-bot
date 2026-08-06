@@ -1,6 +1,6 @@
 import os
 import traceback
-from typing import Any
+from typing import Any, Callable
 
 from disnake import Intents
 from disnake.ext import commands

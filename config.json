@@ -1,5 +1,4 @@
 {
-    "app_id": "1245802015594909748",
     "fire_level": 0,
     "rules": {
         "cat": {
@@ -209,6 +208,10 @@
         "i like pancakes :3",
         "PRAISE THE LAMB!"
     ],
+    "admins": [
+        708030466502164572,
+        639402866657984522
+    ],
     "cogs": [
         "randomcat", 
         "randomfox", 
@@ -226,6 +229,7 @@
         "aetherify",
         "geolayout",
         "srschannels",
-        "kdedragon"
+        "kdedragon",
+        "admin"
     ]
 }
