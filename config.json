@@ -190,6 +190,11 @@
             "uid": 1507671898740494336,
             "rule": "cat",
             "dirname": "aeth-catboys"
+        },
+        "deni": {
+            "uid": 734809811451117591,
+            "rule": "cat",
+            "dirname": "deni-torture"
         }
     },
     "status_change_interval": 14400,
