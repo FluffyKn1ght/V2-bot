@@ -80,7 +80,7 @@ class Reactor(V2BotCog):
                 for bully_type in self.bot.config["bully"]:
                     bully_rule = self.bot.config["bully"][bully_type]
                     if (
-                        bully_rule["uid"] == msg.author.id
+                        msg.author.id in bully_rule["uids"]
                         and bully_rule["rule"] == rule_name
                     ):
                         await self.bot.get_cog("Bully").bully(bully_rule["dirname"], msg.channel, msg)  # type: ignore

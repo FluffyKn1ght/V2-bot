@@ -192,17 +192,12 @@
     },
     "bully": {
         "aether": {
-            "uid": 1507671898740494336,
+            "uids": [ 1507671898740494336 ],
             "rule": "cat",
             "dirname": "aeth-catboys"
         },
         "deni": {
-            "uid": 734809811451117591,
-            "rule": "cat",
-            "dirname": "deni-torture"
-        },
-        "deni-alt": {
-            "uid": 1222990830201995404,
+            "uids": [ 734809811451117591, 1222990830201995404],
             "rule": "cat",
             "dirname": "deni-torture"
         }
