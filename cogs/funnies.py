@@ -23,7 +23,10 @@ class Funnies(V2BotCog):
                     for fname in funny_response["files"]:
                         files.append(File(f"./medihha/{fname}"))
 
-                    await msg.channel.send(funny_response["content"], files=files)
+                    if "content" in funny_response.keys():
+                        await msg.channel.send(funny_response["content"], files=files)
+                    else:
+                        await msg.channel.send(files=files)
 
                 return
 
