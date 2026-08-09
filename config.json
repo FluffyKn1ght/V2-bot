@@ -156,6 +156,10 @@
         "yip": {
              "keywords": ["yip", "fluffy"],
              "reactions": ["🦊", "<:fluffymem:1535014474765828266>"]
+        },
+        "cult_of_the_lamb": {
+            "keywords": ["cult", "lamb"],
+            "reactions": ["🐑"]
         }
     },
     "channel_blacklist": [
