@@ -50,8 +50,8 @@ class GameRules(NamedTuple):
 
 
 class GameResults(NamedTuple):
-    total_time: int
-    avg_time: int
+    total_time: float
+    avg_time: float
     history: list[list[bool]]
 
 
@@ -223,7 +223,7 @@ class ConwaysLifeSlashCommand(V2BotCog):
 
         return gif
 
-    def _make_game_frames(self, history_chunk: list[list[bool]]) -> list[Image]:
+    def _make_game_frames(self, history_chunk: list[list[bool]]) -> list[Image.Image]:
         frames = []
 
         for plane in history_chunk:
@@ -231,13 +231,13 @@ class ConwaysLifeSlashCommand(V2BotCog):
             pixels = frame.load()
             for y in range(PLANE_SIZE[1]):
                 for x in range(PLANE_SIZE[0]):
-                    pixels[x, y] = (
+                    pixels[x, y] = (  # type: ignore
                         (0, 0, 0) if plane[x + (y * PLANE_SIZE[0])] else (255, 255, 255)
                     )
 
             frame = frame.resize(
                 (PLANE_SIZE[0] * GIF_RESIZE_FACTOR, PLANE_SIZE[1] * GIF_RESIZE_FACTOR),
-                resample=Image.NEAREST,
+                resample=Image.Resampling.NEAREST,
             )
             frames.append(frame)
 
