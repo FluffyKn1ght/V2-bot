@@ -128,7 +128,7 @@ class ConwaysLifeSlashCommand(V2BotCog):
 
         await inter.edit_original_response(
             f"{len(results.history)-1} iters, took {round(results.total_time, 2)}s to run. ({round((len(results.history)-1) / 60, 2)} iters/s)",
-            file=File(gif, filename="conways_life.webp"),
+            file=File(gif, filename="conways_life.gif"),
         )
         self.jobs.remove(inter.user.id)
 
