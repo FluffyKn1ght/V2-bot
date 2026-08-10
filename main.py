@@ -74,8 +74,8 @@ class V2Bot(InteractionBot):
         print(txt)
         self.logs += f"{txt}\n"
 
-        if len(self.logs) > 10000:
-            self.logs = self.logs[len(self.logs) - 10000 :]
+        if len(self.logs) > 2000:
+            self.logs = self.logs[len(self.logs) - 2000 :]
 
     @staticmethod
     def read_file(fname: str) -> str:
