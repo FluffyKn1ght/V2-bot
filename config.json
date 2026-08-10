@@ -249,6 +249,7 @@
         "kdedragon",
         "admin",
         "furrify",
-        "optical_media"
+        "optical_media",
+        "conways_life"
     ]
 }
