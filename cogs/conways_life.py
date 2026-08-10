@@ -213,7 +213,7 @@ class ConwaysLifeSlashCommand(V2BotCog):
         gif = io.BytesIO()
         frames[0].save(
             gif,
-            format="WEBP",
+            format="GIF",
             append_images=frames[1:],
             duration=175,
             optimize=True,
