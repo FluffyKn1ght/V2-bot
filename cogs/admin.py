@@ -3,6 +3,7 @@ import os
 import subprocess
 
 from disnake.ext import commands
+from disnake.ext.commands.params import Param
 from disnake.file import File
 from disnake.interactions import ApplicationCommandInteraction
 
@@ -47,8 +48,6 @@ class AdminSlashCommands(V2BotCog):
         )
 
         await inter.response.defer(ephemeral=True)
-
-        os.system("chmod +x ./utils/invoke-journalctl.sh")
 
         subprocess.run(["bash", "./utils/invoke-journalctl.sh"])
 
