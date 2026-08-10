@@ -1,4 +1,5 @@
 from datetime import datetime
+import io
 import os
 import subprocess
 
@@ -23,7 +24,7 @@ class AdminSlashCommands(V2BotCog):
             )
             return
 
-        print(
+        self.bot.log(
             f"/restart_bot triggered by {inter.user.display_name} (UID {inter.user.id}) at {datetime.now().strftime("%Y/%m/%d %H:%M:%S")}"
         )
         await inter.response.send_message(
@@ -43,7 +44,7 @@ class AdminSlashCommands(V2BotCog):
             )
             return
 
-        print(
+        self.bot.log(
             f"/journalctl triggered by {inter.user.display_name} (UID {inter.user.id}) at {datetime.now().strftime("%Y/%m/%d %H:%M:%S")}"
         )
 
@@ -53,7 +54,7 @@ class AdminSlashCommands(V2BotCog):
 
         await inter.edit_original_response(file=File("journal.txt"))
 
-    @commands.slash_command(name="send_log", description="sends the latest.log file")
+    @commands.slash_command(name="send_logs", description="[admin only] sends the logs")
     async def send_log_slash_command(self, inter: ApplicationCommandInteraction):
         if not inter.user.id in self.bot.config["admins"]:
             await inter.response.send_message(
@@ -62,7 +63,7 @@ class AdminSlashCommands(V2BotCog):
             )
             return
 
-        await inter.response.send_message(file=File("latest.log"), ephemeral=True)
+        await inter.response.send_message(f"```{self.bot.logs}```", ephemeral=True)
 
 
 def setup(bot: V2Bot):

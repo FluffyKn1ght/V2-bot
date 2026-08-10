@@ -1,3 +1,4 @@
+import io
 import os
 import traceback
 from typing import Any, Callable
@@ -10,16 +11,20 @@ import json
 from disnake.interactions.application_command import ApplicationCommandInteraction
 from disnake.message import Message
 
+import sys
+
 
 class V2Bot(InteractionBot):
     def __init__(self, *args, config_file: str, secrets_file: str, **kwargs) -> None:
         super().__init__(*args, **kwargs)
 
+        self.logs = ""
+
         self.config_file = config_file
         self.config = json.loads(self.read_file(config_file))
 
         for cog in self.config["cogs"]:
-            print(f"Loading cog {cog}")
+            self.log(f"Loading cog {cog}")
             self.load_extension(f"cogs.{cog}")
 
         self.secrets: dict[str, Any] = json.loads(self.read_file(secrets_file))
@@ -31,13 +36,13 @@ class V2Bot(InteractionBot):
 
         @self.event
         async def on_ready():
-            print(f"Logged in as {self.user.display_name} ({self.user.id})")
+            self.log(f"Logged in as {self.user.display_name} ({self.user.id})")
 
         @self.event
         async def on_slash_command_error(
             inter: ApplicationCommandInteraction, e: Exception
         ):
-            print(
+            self.log(
                 f"SLASH COMMAND ERROR in {inter.application_command.name}! {e.__class__.__name__}: {e}"
             )
 
@@ -65,6 +70,13 @@ class V2Bot(InteractionBot):
             or channel_id in self.srs_channels
         )
 
+    def log(self, txt: str):
+        print(txt)
+        self.logs += f"{txt}\n"
+
+        if len(self.logs) > 10000:
+            self.logs = self.logs[len(self.logs) - 10000 :]
+
     @staticmethod
     def read_file(fname: str) -> str:
         with open(fname, "r") as fp:
@@ -78,5 +90,5 @@ if __name__ == "__main__":
         intents=Intents.all(),
     )
 
-    print('"uwu this collar fits so nicely on me" - V2 apparently idfk')
+    bot.log('"uwu this collar fits so nicely on me" - V2 apparently idfk')
     bot.run_bot()
