@@ -90,7 +90,10 @@ class Reactor(V2BotCog):
 
                 try:
                     for react in reacts:
-                        await msg.add_reaction(react)
+                        if type(react) is str:
+                            await msg.add_reaction(react)
+                        elif type(react) is list:
+                            await msg.add_reaction(random.choice(react))
                 except NotFound:
                     return
 

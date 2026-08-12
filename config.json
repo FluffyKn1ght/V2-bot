@@ -159,7 +159,7 @@
         },
         "cult_of_the_lamb": {
             "keywords": ["cult", "lamb"],
-            "reactions": ["🐑"]
+            "reactions": ["🐑", ["<:lambbaa:1537081529128456263>", "<:lambadore:1537081527387557938>", "<:lamb:1537081525793984623>", "<:fleecelamb:1537081524162138122>"]]
         }
     },
     "channel_blacklist": [
