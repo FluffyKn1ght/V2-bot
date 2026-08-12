@@ -82,7 +82,9 @@ class Bully(V2BotCog):
             )
             return
 
-        await inter.edit_original_response("psychological warfare unleashed :+1:")
+        await inter.edit_original_response(
+            "psychological warfare [unleashed](<https://youtu.be/tJjxKhjR9H4>) :+1:"
+        )
 
 
 def setup(bot: V2Bot):
