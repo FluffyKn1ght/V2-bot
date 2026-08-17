@@ -62,7 +62,7 @@ class DictionaryLookupSlashCommand(V2BotCog):
 
         embed = Embed(
             title=f"{word}",
-            description=f"{f"Phonetic: {data[0]["phonetic"]" if "phonetic" in data[0] else ""}\n{f"Pronounciation: [click here to listen](<{pronounce}>)" if pronounce else "No pronounciation available..."}",
+            description=f"{f"Phonetic: {data[0]["phonetic"]}" if "phonetic" in data[0] else ""}\n{f"Pronounciation: [click here to listen](<{pronounce}>)" if pronounce else "No pronounciation available..."}",
             color=Color(0x9F00FF),
         )
 
