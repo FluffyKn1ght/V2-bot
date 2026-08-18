@@ -139,7 +139,7 @@
         },
         "ghost": {
             "keywords": ["ghost"],
-            "reactions": ["<:plushia:1331672002855047168>"]
+            "reactions": ["<:liveplushiasreaction:1457854378034724875>"]
         },
         "mint": {
             "keywords": ["mint"],
@@ -164,6 +164,18 @@
         "piss_toast": {
             "keywords": ["koop", "piss", "toast"],
             "reactions": ["<:pisstoast:1539306796714565722>"]
+        },
+        "ghost-copia": {
+            "keywords": ["copia", "frater", "plushia", "popia"],
+            "reactions": ["<a:plushia:1539309482742521877>", "<a:miniplushia:1539309873194475601>", "<a:popia:1539309571976204329>", "<a:minipopia:1539309933454172261>", "<a:frater:1539309810581901332>"]
+        },
+        "ghost-primo": {
+            "keywords": ["primo", "plushimo"],
+            "reactions": ["<a:plushimo:1539309666948096000>"]
+        },
+        "ghost-secondo": {
+            "keywords": ["secondo", "plushondo"],
+            "reactions": ["<a:plushondo:1539309743871492216>"]
         }
     },
     "channel_blacklist": [
