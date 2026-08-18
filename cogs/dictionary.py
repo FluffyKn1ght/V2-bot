@@ -42,7 +42,7 @@ class DictionaryLookupSlashCommand(V2BotCog):
                             "okay i fucking give up here's my two weeks (max retries reached)"
                         )
 
-                        await inter.response.edit_message(
+                        await inter.edit_original_response(
                             "api error, please try again :<"
                         )
                         return
