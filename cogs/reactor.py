@@ -63,7 +63,7 @@ class Reactor(V2BotCog):
 
     @Cog.listener("on_message")
     async def on_message_event(self, msg: Message):
-        self.run_message_react_rules(msg)
+        await self.run_message_react_rules(msg)
     
     @Cog.listener("on_raw_message_edit")
     async def on_raw_message_edit_event(self, event: RawMessageUpdateEvent):
