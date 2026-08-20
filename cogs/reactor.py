@@ -62,6 +62,18 @@ class Reactor(V2BotCog):
         await inter.edit_original_response("okiiii i weacted to da meassg :3")
 
     @Cog.listener("on_message")
+    async def on_message_event(self, msg: Message):
+        self.run_message_react_rules(msg)
+    
+    @Cog.listener("on_raw_message_edit")
+    async def on_raw_message_edit_event(self, event: RawMessageUpdateEvent):
+        if not event.guild_id:
+            return
+        
+        guild = await self.bot.fetch_guild(event.guild_id)
+        channel = await guild.fetch_channel(event.channel_id)
+        await self.run_message_react_rules(await channel.fetch_message(event.message_id))
+    
     async def run_message_react_rules(self, msg: Message):
         if not self.bot.can_j_in_channel(msg.channel.id):
             return
