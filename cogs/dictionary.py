@@ -47,7 +47,7 @@ class DictionaryLookupSlashCommand(V2BotCog):
                         )
                         return
                 elif response.status_code == 404:
-                    await inter.edit_original_response("okay what the FUHHH is \"{word}\" vro :wilted_rose:")
+                    await inter.edit_original_response(f"okay what the FUHHH is \"{word}\" vro :wilted_rose:")
                     return
                 else:
                     break
