@@ -64,7 +64,7 @@ class FrameSlashCommand(V2BotCog):
         result.save(result_file, format="PNG")
         result_file.seek(0)
         
-        await inter.channel.send(file=File(result_file, filename="framed.png"))
+        await inter.channel.send(f"requested by {inter.user.mention}", file=File(result_file, filename="framed.png"))
         
         await inter.delete_original_response()
 
