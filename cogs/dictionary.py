@@ -32,13 +32,13 @@ class DictionaryLookupSlashCommand(V2BotCog):
 
                 if response.status_code == 502:
                     if retries < RETRY_COUNT:
-                        self.bot.log(
+                        print(
                             f"got 502 from freedictionary api, retrying ({retries+1}/3)"
                         )
                         retries += 1
                         continue
                     else:
-                        self.bot.log(
+                        print(
                             "okay i fucking give up here's my two weeks (max retries reached)"
                         )
 

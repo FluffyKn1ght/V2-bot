@@ -100,7 +100,7 @@ class ConwaysLifeSlashCommand(V2BotCog):
             )
             return
 
-        self.bot.log(
+        print(
             f"(conways life) starting game with rulestring {rulestring} for user {inter.user.name} ({inter.user.id})"
         )
         self.jobs.add(inter.user.id)
@@ -108,7 +108,7 @@ class ConwaysLifeSlashCommand(V2BotCog):
 
         results = await asyncio.to_thread(self.run_conways_life, cell_chance, rules)
 
-        self.bot.log(
+        print(
             f"(conways life) finished game for {inter.user.name} ({inter.user.id}), {len(results.history)-1} iters, took {results.total_time}s (avg time {results.avg_time}s, {(len(results.history)-1) / 60} iters/s)"
         )
 
@@ -122,7 +122,7 @@ class ConwaysLifeSlashCommand(V2BotCog):
         gif.seek(0)
 
         time2 = time.time()
-        self.bot.log(
+        print(
             f"(conways life) took {time2-time1}s to generate gif for {inter.user.id}"
         )
 

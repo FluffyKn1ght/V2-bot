@@ -10,9 +10,9 @@ class ReloadConfigSlashCommand(V2BotCog):
     async def reloadcfg_command(self, inter: ApplicationCommandInteraction):
         await inter.response.defer(ephemeral=True)
 
-        self.bot.log("reloading config...")
+        print("reloading config...")
         self.bot.reload_config()
-        self.bot.log("reloaded config ok!")
+        print("reloaded config ok!")
 
         await inter.edit_original_response(":+1:")
 
