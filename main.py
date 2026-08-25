@@ -1,18 +1,18 @@
 import io
 import os
 import traceback
+import sys
+import json
 from typing import Any, Callable
 
 from disnake import Intents
 from disnake.ext import commands
 from disnake.ext.commands import InteractionBot
-import json
 
 from disnake.interactions.application_command import ApplicationCommandInteraction
 from disnake.message import Message
 
-import sys
-
+import tqdm
 
 class V2Bot(InteractionBot):
     def __init__(self, *args, config_file: str, secrets_file: str, **kwargs) -> None:
@@ -21,8 +21,8 @@ class V2Bot(InteractionBot):
         self.config_file = config_file
         self.config = json.loads(self.read_file(config_file))
 
-        for cog in self.config["cogs"]:
-            print(f"Loading cog {cog}")
+        print("Loading cogs...")
+        for cog in tqdm.tqdm(self.config["cogs"]):
             self.load_extension(f"cogs.{cog}")
 
         self.secrets: dict[str, Any] = json.loads(self.read_file(secrets_file))
