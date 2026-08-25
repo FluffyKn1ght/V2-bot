@@ -192,8 +192,7 @@
         "g": { "content": "g...", "files": [ "g.png", "g.mp3" ] },
         "bell": { "content": "ultrakill reference?", "files": [ "bell.mp4" ] },
         "billion reservoir ssd": { "files": [ "billion-reservoir-ssd.mp4" ] },
-        "bazzite": { "files": [ "bazzite.mp4" ] },
-        "𝓵𝓮𝓰𝓪𝓽𝓲𝓿𝓮 𝓫𝓲𝓵𝓵𝓲𝓸𝓷 𝔃𝔀𝓮𝓷𝓽𝔂 𝔃𝓸𝓸 𝓱𝓾𝓷𝓭𝓻𝓮𝓭 𝓼𝓬𝓸𝓸𝓽𝓮𝓻𝓽𝔂 𝓼𝓬𝓸𝓸𝓽𝓮𝓻 𝓶𝓲𝓵𝓵𝓲𝓸𝓷 𝓼𝓬𝓸𝓸𝓽𝓮𝓻𝓭𝔂 𝔀𝓪𝓲𝓼𝓲𝓷𝓼 𝓽𝓱𝓸𝓾𝓼𝓪𝓷𝓭 𝔃𝔀𝓮𝓷𝓽𝔂 𝔃𝓸𝓸 𝓱𝓾𝓷𝓭𝓻𝓮𝓭 𝓫𝓲𝓻𝓽𝓮𝓮𝓷 𝓭𝓮 𝓯𝓸𝓾𝓻": "*slams your head with a math textbook*"
+        "bazzite": { "files": [ "bazzite.mp4" ] }
     },
     "horny": {
         "1279586225149181952": [ 1236398659135082538, 1391419140413063331 ],
@@ -268,6 +267,7 @@
         "furrify",
         "optical_media",
         "conways_life",
-        "frame"
+        "frame",
+        "font"
     ]
 }
