@@ -192,7 +192,9 @@
         "g": { "content": "g...", "files": [ "g.png", "g.mp3" ] },
         "bell": { "content": "ultrakill reference?", "files": [ "bell.mp4" ] },
         "billion reservoir ssd,𝓫𝓲𝓵𝓵𝓲𝓸𝓷 𝓻𝓮𝓼𝓮𝓻𝓿𝓸𝓲𝓻 𝓼𝓼𝓭": { "content": "# 𝓫𝓲𝓵𝓵𝓲𝓸𝓷 𝓻𝓮𝓼𝓮𝓻𝓿𝓸𝓲𝓻 𝓼𝓼𝓭", "files": [ "billion-reservoir-ssd.mp4", "centek-brssd.ogg" ] },
-        "bazzite": { "files": [ "bazzite.mp4" ] }
+        "bazzite": { "files": [ "bazzite.mp4" ] },
+        "the greatest catnician thats ever lived": { "files": [ "catnician.mp4" ] },
+        "the greatest catnician that's ever lived": { "files": [ "catnician.mp4" ] }
     },
     "horny": {
         "1279586225149181952": [ 1236398659135082538, 1391419140413063331 ],
