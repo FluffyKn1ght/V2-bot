@@ -22,7 +22,7 @@
             "reactions": ["🐶","🦮","🐕‍🦺","🐕"]
         },
         "british": {
-            "keywords": ["tea","mate","colour","bruv","innit","favourite","twat","rubbish","mum"],
+            "keywords": ["tea","mate","colour","bruv","innit","favourite","twat","rubbish","mum","grey"],
             "reactions": ["🇬🇧"]
         },
         "niko": {
@@ -59,7 +59,7 @@
         },
         "miiverse": {
             "keywords": ["miiverse","y+((e+a*|(u+(h|p)+|a+h*))|h+)","yse"],
-            "reactions": ["<:yellowyeah:1251298655751639092>","<:sm64yeah:1251514167664574525>","<:bupyeah:1251537611974250496>","<:eclipseyeah:1254494364827254808>"]
+            "reactions": ["<:yellowyeah:1251298655751639092>","<:sm64yeah:1251514167664574525>","<:bupyeah:1251537611974250496>"]
         },
         "aeth": {
             "keywords": ["kill(ing|) (my|your)self","k(y|m)s"],
@@ -139,7 +139,7 @@
         },
         "ghost": {
             "keywords": ["ghost"],
-            "reactions": ["<:plushia:1331672002855047168>"]
+            "reactions": ["<:liveplushiasreaction:1457854378034724875>"]
         },
         "mint": {
             "keywords": ["mint"],
@@ -158,8 +158,24 @@
              "reactions": ["🦊", "<:fluffymem:1535014474765828266>"]
         },
         "cult_of_the_lamb": {
-            "keywords": ["cult", "lamb", "sacrifice"],
-            "reactions": ["🐑", ["<:lambbaa:1537081529128456263>", "<:lambadore:1537081527387557938>", "<:lamb:1537081525793984623>", "<:fleecelamb:1537081524162138122>"]]
+            "keywords": ["cult", "lamb", "sacrifice", "wool", "sheep", "bishop"],
+            "reactions": ["🐑", "<:lambbaa:1537081529128456263>", "<:lambadore:1537081527387557938>", "<:lamb:1537081525793984623>", "<:fleecelamb:1537081524162138122>"]
+        },
+        "piss_toast": {
+            "keywords": ["koop", "piss", "toast"],
+            "reactions": ["<:pisstoast:1539306796714565722>"]
+        },
+        "ghost-copia": {
+            "keywords": ["copia", "frater", "plushia", "popia"],
+            "reactions": ["<a:plushia:1539309482742521877>", "<a:miniplushia:1539309873194475601>", "<a:popia:1539309571976204329>", "<a:minipopia:1539309933454172261>", "<a:frater:1539309810581901332>"]
+        },
+        "ghost-primo": {
+            "keywords": ["primo", "plushimo"],
+            "reactions": ["<a:plushimo:1539309666948096000>"]
+        },
+        "ghost-secondo": {
+            "keywords": ["secondo", "plushondo"],
+            "reactions": ["<a:plushondo:1539309743871492216>"]
         }
     },
     "channel_blacklist": [
@@ -175,17 +191,16 @@
         "the fucking iron": "<:the_fucking_iron:1479160085711421677>",
         "g": { "content": "g...", "files": [ "g.png", "g.mp3" ] },
         "bell": { "content": "ultrakill reference?", "files": [ "bell.mp4" ] },
-        "billion reservoir ssd": { "files": [ "billion-reservoir-ssd.mp4" ] },
-        "bazzite": { "files": [ "bazzite.mp4" ] }
+        "billion reservoir ssd,𝓫𝓲𝓵𝓵𝓲𝓸𝓷 𝓻𝓮𝓼𝓮𝓻𝓿𝓸𝓲𝓻 𝓼𝓼𝓭": { "content": "# 𝓫𝓲𝓵𝓵𝓲𝓸𝓷 𝓻𝓮𝓼𝓮𝓻𝓿𝓸𝓲𝓻 𝓼𝓼𝓭", "files": [ "billion-reservoir-ssd.mp4", "centek-brssd.ogg" ] },
+        "bazzite": { "files": [ "bazzite.mp4" ] },
+        "the greatest catnician thats ever lived": { "files": [ "catnician.mp4" ] },
+        "the greatest catnician that's ever lived": { "files": [ "catnician.mp4" ] }
     },
     "horny": {
         "1279586225149181952": [ 1236398659135082538, 1391419140413063331 ],
-        "1356248345508843692": [ 1356247403212050432 ],
-        "718393605068292176": [ 742123470145585253 ],
-        "1391419319652712498": [ 1391419140413063331 ],
-        "1457838622425485343": [ 1457836615933231238 ],
         "1534673037083807814": [ 1534673147691794463 ]
     },
+    "horny_guards": [ 1457739697617895535, 1340395427723345990 ],
     "geolayout": {
         "fuck you": "FUCK **YOU**",
         "(kill (your|ur)self|kys)(| (nuke|v2|toaster))": "no u 🫶",
@@ -219,11 +234,12 @@
         "bested by this, this machine?",
         "i just ultrakilled v1 (no cap)",
         "waiting for deni to come out...",
-        "deni is a cat furry femboy btw",
-        "i like pan cakes",
+        "deni is a gay furry femboy btw",
+        "i like pan cakes >:3",
         "i like pancakes :3",
         "PRAISE THE LAMB!",
-        "i can't see...HATSUNE MIKU?!?!?"
+        "i can't see...HATSUNE MIKU?!?!?",
+        "smf dont forget to take ur estro!"
     ],
     "admins": [
         708030466502164572,
@@ -250,6 +266,8 @@
         "admin",
         "furrify",
         "optical_media",
-        "conways_life"
+        "conways_life",
+        "frame",
+        "font"
     ]
 }
