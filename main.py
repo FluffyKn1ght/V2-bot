@@ -14,6 +14,7 @@ from disnake.message import Message
 
 import tqdm
 
+
 class V2Bot(InteractionBot):
     def __init__(self, *args, config_file: str, secrets_file: str, **kwargs) -> None:
         super().__init__(*args, **kwargs)
@@ -53,7 +54,7 @@ class V2Bot(InteractionBot):
             await inter.response.send_message(":+1:", ephemeral=True)
 
     def run_bot(self):
-        self.run(self.secrets["token"])
+        self.run(self.secrets["discord_bot_token"])
 
     def reload_config(self):
         self.config = json.loads(self.read_file(self.config_file))

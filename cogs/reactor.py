@@ -1,6 +1,7 @@
 import random
 import re
 
+from disnake import RawMessageUpdateEvent
 from disnake.errors import NotFound
 from disnake.ext import commands
 from disnake.ext.commands.cog import Cog
@@ -64,19 +65,21 @@ class Reactor(V2BotCog):
     @Cog.listener("on_message")
     async def on_message_event(self, msg: Message):
         await self.run_message_react_rules(msg)
-    
+
     @Cog.listener("on_raw_message_edit")
     async def on_raw_message_edit_event(self, event: RawMessageUpdateEvent):
         if not event.guild_id:
             return
-        
+
         guild = await self.bot.fetch_guild(event.guild_id)
         channel = await guild.fetch_channel(event.channel_id)
-        await self.run_message_react_rules(await channel.fetch_message(event.message_id))
-    
+        await self.run_message_react_rules(await channel.fetch_message(event.message_id))  # type: ignore
+
     async def run_message_react_rules(self, msg: Message):
         if not self.bot.can_j_in_channel(msg.channel.id):
             return
+
+        reacts = []
 
         for rule_name in self.bot.config["rules"]:
             rule = self.bot.config["rules"][rule_name]
@@ -97,17 +100,18 @@ class Reactor(V2BotCog):
                     ):
                         await self.bot.get_cog("Bully").bully(bully_rule["dirname"], msg.channel, msg)  # type: ignore
 
-                reacts = rule["reactions"]
-                random.shuffle(reacts)
+                reacts += rule["reactions"]
 
-                try:
-                    for react in reacts:
-                        if type(react) is str:
-                            await msg.add_reaction(react)
-                        elif type(react) is list:
-                            await msg.add_reaction(random.choice(react))
-                except NotFound:
-                    return
+        random.shuffle(reacts)
+
+        try:
+            for react in reacts:
+                if type(react) is str:
+                    await msg.add_reaction(react)
+                elif type(react) is list:
+                    await msg.add_reaction(random.choice(react))
+        except NotFound:
+            return
 
 
 def setup(bot: V2Bot):
