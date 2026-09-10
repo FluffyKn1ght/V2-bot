@@ -2,7 +2,7 @@ import random
 import re
 
 from disnake import RawMessageUpdateEvent
-from disnake.errors import NotFound
+from disnake.errors import HTTPException, NotFound
 from disnake.ext import commands
 from disnake.ext.commands.cog import Cog
 from disnake.ext.commands.params import Param
@@ -104,14 +104,17 @@ class Reactor(V2BotCog):
 
         random.shuffle(reacts)
 
-        try:
-            for react in reacts:
+        for react in reacts:
+            try:
                 if type(react) is str:
                     await msg.add_reaction(react)
                 elif type(react) is list:
                     await msg.add_reaction(random.choice(react))
-        except NotFound:
-            return
+            except NotFound:
+                return
+            except HTTPException:
+                print(f"invalid react {react}")
+
 
 
 def setup(bot: V2Bot):
