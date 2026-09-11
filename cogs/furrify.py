@@ -14,14 +14,15 @@ REPLACE_RULES: dict[str, str] = {"r": "w", "l": "w", "sp": "spw", "te": "twe"}
 ADDITIONS: list[list[str]] = [
     [
         "\\*yip\\*",
-        "\\*yiiip\\*" "\\*meow\\*",
+        "\\*yiiip\\*",
+        "\\*meow\\*",
         "\\*mrreow\\*",
         "\\*mrrr\\*",
         "\\*purr*\\*",
     ],
     [
         ":3",
-        ":3",
+        ":3c",
         ">:3",
         ">:3c",
         "OwO",
