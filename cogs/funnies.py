@@ -13,7 +13,7 @@ class Funnies(V2BotCog):
             return
 
         for text in self.bot.config["funnies"]:
-            if msg.content in text.split(","):
+            if msg.content.lower() in text.split(","):
                 funny_response = self.bot.config["funnies"][text]
 
                 if type(funny_response) is str:
