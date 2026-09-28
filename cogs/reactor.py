@@ -44,6 +44,8 @@ class Reactor(V2BotCog):
             )
             return
 
+        # TODO: Fix this not being as advanced as run_message_react_rules
+
         if emojis_or_rule in self.bot.config["rules"].keys():
             reacts = self.bot.config["rules"][emojis_or_rule]["reactions"]
             random.shuffle(reacts)
@@ -80,9 +82,17 @@ class Reactor(V2BotCog):
             return
 
         reacts = []
+        rules = []
 
         for rule_name in self.bot.config["rules"]:
             rule = self.bot.config["rules"][rule_name]
+            rules.append(rule)
+
+            try:
+                if rule["keep_order"]:
+                    continue
+            except KeyError:
+                pass
 
             match_found = False
             for expr in rule["keywords"]:
@@ -104,6 +114,13 @@ class Reactor(V2BotCog):
 
         random.shuffle(reacts)
 
+        for rule in rules:
+            try:
+                if rule["keep_order"]:
+                    reacts += rule["reactions"]
+            except KeyError:
+                continue
+
         for react in reacts:
             try:
                 if type(react) is str:
@@ -114,7 +131,6 @@ class Reactor(V2BotCog):
                 return
             except HTTPException:
                 print(f"invalid react {react}")
-
 
 
 def setup(bot: V2Bot):

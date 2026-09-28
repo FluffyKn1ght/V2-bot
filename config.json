@@ -157,9 +157,18 @@
              "keywords": ["yip", "fluffy"],
              "reactions": ["🦊", "<:fluffymem:1535014474765828266>"]
         },
-        "cult_of_the_lamb": {
-            "keywords": ["cult", "lamb", "sacrifice", "wool", "sheep", "bishop"],
-            "reactions": ["🐑", "<:lambbaa:1537081529128456263>", "<:lambadore:1537081527387557938>", "<:lamb:1537081525793984623>", "<:fleecelamb:1537081524162138122>"]
+        "cotl_lamb": {
+            "keywords": ["cult", "lamb", "sacrifice", "wool", "sheep", "saviour", "savior"],
+            "reactions": ["🐑", "<:lambbaa:1537081529128456263>", "<:lambadore:1537081527387557938>", "<:lamb:1537081525793984623>", "<:fleecelamb:1537081524162138122>", ["<:lambbean:1554184314348904510>", "<a:lambbleat:1554184317528309841>", "<a:lambmeditate:1554184321693122741>", "<a:lambroll:1554184323849261116>", "<:lambstare:1554184330136526848>"]]
+        },
+        "cotl_bishops": {
+            "keywords": ["bishop", "leshy", "heket", "kallamar", "shamura"],
+            "reactions": ["<:crleshy:1554185719457517650>", "<:crheket:1554185715779112980>", "<:crkallamar:1554185717268222123>", "<:crshamura:1554185721563058389>"],
+            "keep_order": true
+        },
+        "cotl_goat": {
+            "keywords": ["goat"],
+            "reactions": ["🐐", "<:goat:1554187527714242671>", "<:goatbleh:1554187530222444584>", "<a:goatbounce:1554187532625911808>", "<a:goatbounce:1554187532625911808>"]
         },
         "piss_toast": {
             "keywords": ["koop", "piss", "toast"],
