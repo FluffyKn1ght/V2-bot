@@ -86,20 +86,20 @@ class Reactor(V2BotCog):
 
         for rule_name in self.bot.config["rules"]:
             rule = self.bot.config["rules"][rule_name]
-            rules.append(rule)
-
-            try:
-                if rule["keep_order"]:
-                    continue
-            except KeyError:
-                pass
 
             match_found = False
             for expr in rule["keywords"]:
                 result = re.search(expr, msg.content.lower())
                 if result:
                     match_found = True
+                    rules.append(rule)
                     break
+
+            try:
+                if rule["keep_order"]:
+                    continue
+            except KeyError:
+                pass
 
             if match_found:
                 for bully_type in self.bot.config["bully"]:
