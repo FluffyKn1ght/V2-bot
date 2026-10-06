@@ -225,7 +225,10 @@
         "aether": {
             "uids": [ 1507671898740494336 ],
             "rule": "cat",
-            "dirname": "aeth-catboys"
+            "dirname": "aeth-catboys",
+            "limit": {
+                "11.png": [1454659079585792158]
+            }
         },
         "deni": {
             "uids": [ 734809811451117591, 1222990830201995404],

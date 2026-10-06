@@ -28,12 +28,19 @@ class Bully(V2BotCog):
         self.bully_types = [x for x in self.bot.config["bully"]]
 
     async def bully(
-        self, dirname: str, channel: Messageable, reply_to: Message | None = None
+        self, rule: dict, gid: int, channel: Messageable, reply_to: Message | None = None
     ):
         files = []
 
-        for file in os.listdir(f"./medihha/{dirname}"):
-            fullpath = os.path.join(f"./medihha/{dirname}", file)
+        for file in os.listdir(f"./medihha/{rule["dirname"]}"):
+            #print(file)
+            if "limit" in rule:
+                if file.split("/")[-1] in rule["limit"]:
+                    if not gid in rule["limit"][file.split("/")[-1]]:
+                        #print("skipping!!")
+                        continue
+        
+            fullpath = os.path.join(f"./medihha/{rule["dirname"]}", file)
             if os.path.isfile(fullpath):
                 files.append(fullpath)
 
@@ -66,7 +73,8 @@ class Bully(V2BotCog):
 
         try:
             await self.bully(
-                self.bot.config["bully"][bully_type]["dirname"],
+                self.bot.config["bully"][bully_type],
+                inter.guild.id,
                 inter.channel,
                 (
                     await inter.channel.fetch_message(
