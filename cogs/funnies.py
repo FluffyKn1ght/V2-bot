@@ -9,7 +9,7 @@ from main import V2Bot
 class Funnies(V2BotCog):
     @Cog.listener("on_message")
     async def do_funny_message(self, msg: Message):
-        if msg.author == self.bot.user:
+        if msg.author.id == self.bot.user.id:
             return
 
         if not self.bot.can_j_in_channel(msg.channel.id):
