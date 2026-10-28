@@ -11,29 +11,15 @@ class GrokIsThisTrueSlashCommand(V2BotCog):
         name="grok",
         description="grok",
     )
-    def grok(self, inter: ApplicationCommandInteraction):
+    async def grok(self, inter: ApplicationCommandInteraction):
         pass
 
     @grok.sub_command(
-        name="is",
-        description="is"
+        name="isthistrue",
+        description="checks if this is factual information"
     )
-    def grok_is(self, inter: ApplicationCommandInteraction):
-        pass
-
-    @grok_is.sub_command(
-        name="this",
-        description="this"
-    )
-    def grok_is_this(self, inter: ApplicationCommandInteraction):
-        pass
-
-    @grok_is_this.sub_command(
-        name="true",
-        description="true"
-    )
-    def grok_is_this_true(self, inter: ApplicationCommandInteraction):
-        inter.response.send_message(random.choice(["yes", "yes", "yes", "yes", "yes", "no", "no", "no", "no", "no", "dih"]))
+    async def grok_is_this_true(self, inter: ApplicationCommandInteraction):
+        await inter.response.send_message(random.choice(["yes", "yes", "yes", "yes", "yes", "no", "no", "no", "no", "no", "dih"]))
 
 def setup(bot: V2Bot):
     bot.add_cog(GrokIsThisTrueSlashCommand(bot))
