@@ -55,7 +55,7 @@ class Aetherify(V2BotCog):
         unaethered = ""
         for letter in text:
             code = ord(letter) + 0x10
-            if code == 0x20:
+            if code == 0x30:
                 unaethered += " "
             else:
                 unaethered += chr(code)
